@@ -12,10 +12,10 @@ let mongoUrl = process.env.MongoLiveUrl;
 let db;
 
 //middleware (supporting lib)
-// app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(bodyParser.json());
-// app.use(cors());
-app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(cors());
+// app.use(express.json());
 // 1.D
 app.get('/', (req, res) => {
     res.send('Express Server default')
