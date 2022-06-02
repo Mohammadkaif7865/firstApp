@@ -1,36 +1,36 @@
 // page 1
 > List of city
->>(Get) http://localhost:9100/location
+>>(Get) https://restaurantmysite.herokuapp.com/location   (Done)
 > List of restaurant
->>(Get) http://localhost:9100/restaurants
+>>(Get) https://restaurantmysite.herokuapp.com/restaurants   (Done)
 > Restaurant on the basis of city
->>(Get) http://localhost:9100/restaurants?stateId=3
+>>(Get) https://restaurantmysite.herokuapp.com/restaurants?stateId=3   (Done)
 > List of QuickSearch
->>(Get) http://localhost:9100/mealType
+>>(Get) https://restaurantmysite.herokuapp.com/mealtype   (Done)
 
 //Page2
 > List of restaurant on basis of meal
->>(Get) http://localhost:9100/restaurants?mealId=5
-> http://localhost:9100/restaurants?mealId=5&stateId=2
+>>(Get) https://restaurantmysite.herokuapp.com/restaurants?mealId=5  (Done)
+> https://restaurantmysite.herokuapp.com/restaurants?mealId=5&stateId=2  (Done)
 > Filter on basis of cuisine
->>(Get) http://localhost:9100/filter/1?cuisineId=2
+>>(Get) https://restaurantmysite.herokuapp.com/filter/1?cuisineId=2  (Done)
 > Filter on basis of cost
->>(>(Get) http://localhost:9100/filter/1?lcost=700&hcost=1200
+>>(>(Get) https://restaurantmysite.herokuapp.com/filter/1?lcost=700&hcost=1200  (Done)
 > Sort on basis of cost
->>(Get) http://localhost:9100/filter/1?lcost=500&hcost=1200&sort=-1
+>>(Get) https://restaurantmysite.herokuapp.com/filter/1?lcost=500&hcost=1200&sort=-1   (Done)
 
 //Page3
 > Details of the restaurant
->>(Get) http://localhost:9100/details/5
-> Menu of the restaurant
->>(Get) http://localhost:9100/menu/7
+>>(Get) https://restaurantmysite.herokuapp.com/details/5   (Done)
+> Menu of the restaurant 
+>>(Get) https://restaurantmysite.herokuapp.com/menu/7         (Done)
 
 //page4
 > Menu details (selected item)
->>(Post) localhost:9100/menuItem
+>>(Post) https://restaurantmysite.herokuapp.com/menuItem    (Done)
 [1,4,6]
 > Place order
->>(Post) localhost:9100/placeOrder
+>>(Post) https://restaurantmysite.herokuapp.com/placeOrder   (await)
 (
     {
         "name":"Nikita",
@@ -44,11 +44,11 @@
 
 //page5
 > List of order placed 
->>(Get) http://localhost:9100/orders
+>>(Get) https://restaurantmysite.herokuapp.com/orders   (Done)
 > List of order placed of particular user
->>(Get) http://localhost:9100/orders?email=amit@gmail.com
+>>(Get) https://restaurantmysite.herokuapp.com/orders?email=monu@gmail.com  (Done)
 > Update order status
->>(Put) http://localhost:9100/updateOrder/2
+>>(Put) https://restaurantmysite.herokuapp.com/updateOrder/2  (await)
 (
     {
         "status":"TAX_FAIL",
@@ -61,4 +61,4 @@
 
 ////////////////////////////////
 > Delete orders
->>(Delete) localhost:9100/deleteOrder/628c485d93399d546c136d84
+>>(Delete) https://restaurantmysite.herokuapp.com/deleteOrder/628c485d93399d546c136d84  (await)
