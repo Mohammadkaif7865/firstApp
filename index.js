@@ -148,7 +148,7 @@ app.get('/menuItem', (req, res) => {
 // 11. D
 app.post('/placeOrder', (req, res) => {
     console.log(req.body)
-    db.collection('orders').insert(req.body, (err, result) => {
+    db.collection('orders').insertMany(req.body, (err, result) => {
         if (err) throw err;
         res.send(result);
     });
