@@ -135,7 +135,7 @@ app.get('/orders', (req, res) => {
 });
 // 10. D
 //menu on basis user selected ids
-app.get('/menuItem', (req, res) => {
+app.post('/menuItem', (req, res) => {
     if (Array.isArray(req.body)) {
         db.collection('restaurantmenu').find({ menu_id: { $in: req.body } }).toArray((err, result) => {
             if (err) throw err;
