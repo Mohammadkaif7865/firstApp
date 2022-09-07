@@ -156,7 +156,7 @@ app.post('/placeOrder', (req, res) => {
 // 12.  D
 app.put('/updateOrder/:id', (req, res) => {
     let oid = Number(req.params.id);
-    db.collection('orders').updateOne({ orderId: oid }, {
+    db.collection('orders').updateOne({ id: oid }, {
         $set: {
             "status": req.body.status,
             "bank_name": req.body.bank_name,
@@ -164,7 +164,7 @@ app.put('/updateOrder/:id', (req, res) => {
         }
     }, (err, result) => {
         if (err) throw err;
-        res.send('Order Updated')
+        res.send(result);
     });
 });
 // 13. D
