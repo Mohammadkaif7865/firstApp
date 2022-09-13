@@ -137,7 +137,7 @@ app.get('/orders', (req, res) => {
 //menu on basis user selected ids
 app.post('/menuItem', (req, res) => {
     if (Array.isArray(req.body)) {
-        db.collection('restaurantmenu').find({ menu_id: { $in: req.body } }).toArray((err, result) => {
+        db.collection('restaurantmenu').find({ menu_id: { $in: req.body } }).sort({ menu_id: 1 }).toArray((err, result) => {
             if (err) throw err;
             res.send(result);
         })
