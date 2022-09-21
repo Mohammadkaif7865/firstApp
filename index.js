@@ -145,9 +145,15 @@ app.post('/menuItem', (req, res) => {
         res.send('Invalid Input');
     }
 });
+//User message from different website
+app.post('/usermessage', (req, res) => {
+    db.collection('mymessage').insertOne(req.body, (err, result) => {
+        if (err) throw err;
+        res.send(result);
+    });
+});
 // 11. D
 app.post('/placeOrder', (req, res) => {
-    console.log(req.body)
     db.collection('orders').insertOne(req.body, (err, result) => {
         if (err) throw err;
         res.send(result);
